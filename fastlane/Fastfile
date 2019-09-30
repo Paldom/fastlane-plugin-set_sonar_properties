@@ -1,0 +1,7 @@
+lane :test do
+  @sonar_props = {
+    "sonar.projectName" => "Renamed project"
+  }
+  res = set_sonar_properties(input_path: "example.properties", output_path: "example.properties", sonar_props: @sonar_props)
+  puts res
+end
